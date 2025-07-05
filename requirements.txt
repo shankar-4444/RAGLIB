@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+python-multipart
+pdfplumber
+faiss-cpu
+sentence-transformers
+httpx
+python-dotenv
+PyMuPDF
+pandas
+Pillow
+pytesseract
