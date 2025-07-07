@@ -34,3 +34,6 @@ class ChatResponse(BaseModel):
     answer: str
     sources: List[str] = []
     conversation_id: str
+
+class ConversationUpdateSchema(BaseModel):
+    title: str

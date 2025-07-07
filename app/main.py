@@ -4,6 +4,7 @@ from app.api import libraries, pdfs, chat, history
 from app.db.session import engine
 from app.db import models
 from app.rag.vector_store import vector_store
+from app.api.history import debug_router
 
 # Create database tables
 models.Base.metadata.create_all(bind=engine)
@@ -24,6 +25,7 @@ app.include_router(libraries.router, prefix="/libraries", tags=["libraries"])
 app.include_router(pdfs.router, prefix="/libraries", tags=["pdfs"])
 app.include_router(chat.router, prefix="/libraries", tags=["chat"])
 app.include_router(history.router, prefix="/libraries", tags=["history"])
+app.include_router(debug_router)
 
 @app.on_event("startup")
 async def startup_event():
